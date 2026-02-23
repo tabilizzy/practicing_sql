@@ -1,5 +1,5 @@
 
---First sub query 
+--First sub query question 3
 
 SELECT  
         name,
@@ -14,7 +14,7 @@ FROM employees
    GROUP BY department_id
   );
 
-  --second sub query 
+  --second sub query question 4
 
   SELECT  
      *
@@ -25,6 +25,6 @@ FROM employees
     FROM 
     employees
    ORDER BY salary DESC
-  LIMIT 1 OFFSET 1
+  LIMIT 2 OFFSET 1
   );
 

@@ -1,4 +1,4 @@
----first cte
+---first cte question 1
 
 WITH employees_info AS (
   SELECT
@@ -9,8 +9,8 @@ WITH employees_info AS (
     employees AS e
     INNER JOIN departments AS d
     ON department_id=d.id
-  WHERE avgSalary > salary
-  GROUP BY e.name, salary 
+   WHERE salary > avgSalary 
+   GROUP BY e.name, salary 
     
 )
 SELECT  
@@ -19,7 +19,7 @@ SELECT
 FROM employees_info;
 
 
----second  cte
+---second  cte question 2
 
 WITH HighestEmployees_info AS (
   SELECT

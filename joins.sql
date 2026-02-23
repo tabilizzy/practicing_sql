@@ -25,4 +25,16 @@ SELECT
   FROM
     employees AS e
     FULL JOIN departments AS d
-    ON department_id=d.id;
+    ON department_id=d.id
+    WHERE department_id IS NULL;
+
+  --question 8  
+SELECT 
+  c.name,
+  o.amount,
+  sum(amount) AS totalOrderAmount, 
+  o.date
+FROM customer AS c
+INNER JOIN order AS o
+ON customer_id=c.id
+GROUP BY c.name, o.amount, o.date;
